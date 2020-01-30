@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="32dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/zoomBar"
+                    android:layout_width="300dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:rotation="270"
+                    android:max="100"
+                    android:progress="50"
+                    android:layout_gravity="center"
+                    android:thumb="@drawable/shape_thumb"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:padding="5dp"
+                android:rotation="90"
+                android:text="Zoom"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
